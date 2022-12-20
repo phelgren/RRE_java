@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Employee_Gender_Chart" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Employee_Gender_Chart" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="426cf7ea-7a20-4a97-97f5-01a0b589f36e">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="IBM i DB2 "/>
 	<queryString>
 		<![CDATA[SELECT
     count(EMPBASIC."SEX") AS Gender, EMPBASIC."SEX" as emp_SEX
 FROM
-     "REPTSAMPLE"."EMPBASIC" EMPBASIC
+     "RRE"."EMPBASIC" EMPBASIC
 group by EMPBASIC."SEX"]]>
 	</queryString>
 	<field name="GENDER" class="java.lang.Integer"/>
@@ -21,15 +23,15 @@ group by EMPBASIC."SEX"]]>
 	<title>
 		<band height="79" splitType="Stretch">
 			<staticText>
-				<reportElement x="124" y="0" width="546" height="66"/>
+				<reportElement x="124" y="0" width="546" height="66" uuid="c86f3367-93a3-4027-859a-079d2c23a723"/>
 				<textElement>
 					<font fontName="Times New Roman" size="48"/>
 				</textElement>
 				<text><![CDATA[Employee Gender Pie Chart]]></text>
 			</staticText>
 			<image>
-				<reportElement x="17" y="0" width="49" height="53"/>
-				<imageExpression><![CDATA["E:\\Workspaces\\rre\\ReportGenerator\\reports\\report_templates\\images\\IBM_i_logo.jpg"]]></imageExpression>
+				<reportElement x="17" y="0" width="49" height="53" uuid="f78d46b4-1862-424e-804f-8f1e0e5d7cd5"/>
+				<imageExpression><![CDATA["images/IBM_i_logo.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>
@@ -42,28 +44,28 @@ group by EMPBASIC."SEX"]]>
 	<detail>
 		<band height="23" splitType="Stretch">
 			<textField>
-				<reportElement x="137" y="3" width="100" height="20"/>
+				<reportElement x="137" y="3" width="100" height="20" uuid="220e26f9-89f6-494d-8a77-7c39cb1e0a09"/>
 				<textElement>
 					<font fontName="Arial" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{GENDER}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="445" y="3" width="100" height="20"/>
+				<reportElement x="445" y="3" width="100" height="20" uuid="2db0d794-00b4-4e18-ba0e-23ecb8e2ef54"/>
 				<textElement>
 					<font fontName="Arial" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{EMP_SEX}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="45" y="3" width="79" height="20"/>
+				<reportElement x="45" y="3" width="79" height="20" uuid="0ea647ae-196e-4df3-a154-f6982d9e2a78"/>
 				<textElement>
 					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Count]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="356" y="3" width="59" height="20"/>
+				<reportElement x="356" y="3" width="59" height="20" uuid="78399d8c-57b1-49de-8cef-af70329f05b2"/>
 				<textElement>
 					<font fontName="Arial" size="12" isBold="true"/>
 				</textElement>
@@ -81,12 +83,13 @@ group by EMPBASIC."SEX"]]>
 		<band height="349" splitType="Stretch">
 			<pieChart>
 				<chart>
-					<reportElement x="137" y="0" width="506" height="328"/>
+					<reportElement x="137" y="0" width="506" height="328" uuid="23b58c0e-f158-490d-abb1-8d832db6ca3a"/>
 					<chartTitle/>
 					<chartSubtitle/>
 					<chartLegend/>
 				</chart>
 				<pieDataset>
+					<dataset resetType="Report"/>
 					<keyExpression><![CDATA[$F{EMP_SEX}]]></keyExpression>
 					<valueExpression><![CDATA[$F{GENDER}]]></valueExpression>
 				</pieDataset>

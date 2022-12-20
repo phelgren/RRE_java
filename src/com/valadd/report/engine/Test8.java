@@ -49,7 +49,7 @@ public class Test8{
     	boolean success = true;
     	
     	String reportName = "/reports/report_templates/Employee_Listing_with_Parms.jrxml";
-    	String reportOutput = "/reports/report_output/Employee_List_with_Parms";
+    	String reportOutput = "/reports/report_output/Employee_List_with_Parms_test8";
     	HashMap reportParameters = new HashMap();
     	reportParameters.put("selectZip", "84105");
     	String outputFormat = "PDF";

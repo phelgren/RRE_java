@@ -49,7 +49,7 @@ public class Test7{
     	boolean success = true;
     	
     	String reportName = "/reports/report_templates/Employee_Listing_with_Parms.jasper";
-    	String reportOutput = "/reports/report_output/Employee_List_with_parms";
+    	String reportOutput = "/reports/report_output/Employee_List_with_parms_test7";
     	HashMap reportParameters = new HashMap();
     	reportParameters.put("selectZip", "84039");
     	String outputFormat = "PDF";

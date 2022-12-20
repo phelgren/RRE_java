@@ -49,7 +49,7 @@ public class Test4{
     	boolean success = true;
     	
     	String reportName = "/reports/report_templates/Employee_Listing.jrxml";
-    	String reportOutput = "/reports/report_output/Employee_List";
+    	String reportOutput = "/reports/report_output/Employee_List_test4";
     	HashMap reportParameters = null;
     	String outputFormat = "TXT";
     	

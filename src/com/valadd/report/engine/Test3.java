@@ -47,7 +47,7 @@ public class Test3{
     	boolean success = true;
     	
     	String reportName = "/reports/report_templates/Employee_Listing.jasper";
-    	String reportOutput = "/reports/report_output/Employee_List";
+    	String reportOutput = "/reports/report_output/Employee_List_test3";
     	//String reportName = "E:\\Workspaces\\rre\\ReportGenerator\\reports\\report_templates\\Employee_Listing.jasper";
     	//String reportOutput = "E:\\Workspaces\\rre\\ReportGenerator\\reports\\report_output\\Employee_List";
  

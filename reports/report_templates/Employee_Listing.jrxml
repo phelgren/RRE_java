@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Employee_Listing" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Employee_Listing" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e014e8f7-f9db-4776-8dcc-02fd5a06885a">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="IBM i DB2 "/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
@@ -23,7 +25,7 @@
      EMPBASIC."ZIP" AS EMPBASIC_ZIP,
      EMPBASIC."SEX" AS EMPBASIC_SEX
 FROM
-     "REPTSAMPLE"."EMPBASIC" EMPBASIC]]>
+     "RRE"."EMPBASIC" EMPBASIC]]>
 	</queryString>
 	<field name="EMPBASIC_LASTNAME" class="java.lang.String"/>
 	<field name="EMPBASIC_FIRSTNAME" class="java.lang.String"/>
@@ -38,18 +40,18 @@ FROM
 	<title>
 		<band height="136" splitType="Stretch">
 			<image>
-				<reportElement x="0" y="0" width="164" height="126"/>
+				<reportElement x="0" y="0" width="164" height="126" uuid="295366e9-19f5-4f1c-8f92-b7b21538e4a4"/>
 				<imageExpression><![CDATA["images/IBM_i_logo.jpg"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement style="Title" x="172" y="0" width="436" height="62"/>
+				<reportElement style="Title" x="172" y="0" width="436" height="62" uuid="5bd878f0-232c-4252-ac3c-026f6b750071"/>
 				<textElement verticalAlignment="Middle">
 					<font pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Employee Listing]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="SubTitle" x="303" y="62" width="196" height="22"/>
+				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="8125454b-eb1e-434f-ba34-69197f1c6158"/>
 				<textElement>
 					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
 				</textElement>
@@ -63,44 +65,37 @@ FROM
 	<columnHeader>
 		<band height="16" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="cc291d88-2074-49f4-beba-533689d5b846"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement style="Column header" x="0" y="0" width="100" height="15" forecolor="#736343"/>
-				<textElement/>
+				<reportElement style="Column header" x="0" y="0" width="100" height="15" forecolor="#736343" uuid="9b6ddbfc-d146-4190-a898-7422ded23f61"/>
 				<text><![CDATA[Last Name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="100" y="0" width="115" height="15" forecolor="#736343"/>
-				<textElement/>
+				<reportElement style="Column header" x="100" y="0" width="115" height="15" forecolor="#736343" uuid="d3cf2e3e-bffd-44f2-9737-002540a0056d"/>
 				<text><![CDATA[First Name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="215" y="0" width="184" height="15" forecolor="#736343"/>
-				<textElement/>
+				<reportElement style="Column header" x="215" y="0" width="184" height="15" forecolor="#736343" uuid="2889c0e1-097d-4b06-8c39-80431306c995"/>
 				<text><![CDATA[Address]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="399" y="0" width="186" height="15" forecolor="#736343"/>
-				<textElement/>
+				<reportElement style="Column header" x="399" y="0" width="186" height="15" forecolor="#736343" uuid="277ef339-bbde-476b-9f06-789e443be769"/>
 				<text><![CDATA[City]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="585" y="0" width="80" height="15" forecolor="#736343"/>
-				<textElement/>
+				<reportElement style="Column header" x="585" y="0" width="80" height="15" forecolor="#736343" uuid="552639f8-e5e4-42ec-9dfa-ec9cce702a12"/>
 				<text><![CDATA[State]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="665" y="0" width="69" height="15" forecolor="#736343"/>
-				<textElement/>
+				<reportElement style="Column header" x="665" y="0" width="69" height="15" forecolor="#736343" uuid="ad7fefdf-d746-4bcd-8fbf-d4c444a83f0d"/>
 				<text><![CDATA[Zip]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="734" y="1" width="47" height="15" forecolor="#736343"/>
-				<textElement/>
+				<reportElement style="Column header" x="734" y="1" width="47" height="15" forecolor="#736343" uuid="86cd183c-c5cc-42ee-ab70-34b793babaef"/>
 				<text><![CDATA[Sex]]></text>
 			</staticText>
 		</band>
@@ -108,40 +103,39 @@ FROM
 	<detail>
 		<band height="15" splitType="Stretch">
 			<frame>
-				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15"/>
-				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="0" y="0" width="100" height="15"/>
-					<textElement/>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="57a32942-0019-4997-bfa3-c777ff9bd3f8"/>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="0" y="0" width="100" height="15" uuid="362037f2-2535-4732-869d-affd7daf964f"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
 					<textFieldExpression><![CDATA[$F{EMPBASIC_LASTNAME}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="100" y="0" width="115" height="15"/>
-					<textElement/>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="100" y="0" width="115" height="15" uuid="c48fb2d3-296c-4bbd-9fe3-fdc6a8b95c98"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
 					<textFieldExpression><![CDATA[$F{EMPBASIC_FIRSTNAME}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="215" y="0" width="184" height="15"/>
-					<textElement/>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="215" y="0" width="184" height="15" uuid="d14b3184-4594-477c-9e65-0680b11baddd"/>
 					<textFieldExpression><![CDATA[$F{EMPBASIC_ADDRESS1}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="399" y="0" width="186" height="15"/>
-					<textElement/>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="399" y="0" width="186" height="15" uuid="f1b7ca52-d81c-47d2-8d54-690b5bb125fe"/>
 					<textFieldExpression><![CDATA[$F{EMPBASIC_CITY}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="585" y="0" width="80" height="15"/>
-					<textElement/>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="585" y="0" width="80" height="15" uuid="6a529e9a-2015-4d1b-93f4-44872a4b2461"/>
 					<textFieldExpression><![CDATA[$F{EMPBASIC_STATE}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="665" y="0" width="69" height="15"/>
-					<textElement/>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="665" y="0" width="69" height="15" uuid="97418a20-8084-465f-acce-ccbc9224e38f"/>
 					<textFieldExpression><![CDATA[$F{EMPBASIC_ZIP}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="734" y="0" width="47" height="15"/>
-					<textElement/>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="734" y="0" width="47" height="15" uuid="e5202181-4081-4abe-a4d0-46b41969e88a"/>
 					<textFieldExpression><![CDATA[$F{EMPBASIC_SEX}]]></textFieldExpression>
 				</textField>
 			</frame>
@@ -150,7 +144,7 @@ FROM
 	<columnFooter>
 		<band height="6" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="c9063dad-c112-4938-9306-33af21ab5460"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
@@ -160,23 +154,23 @@ FROM
 	<pageFooter>
 		<band height="25" splitType="Stretch">
 			<frame>
-				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF"/>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="22ebbe83-2a3e-407a-8823-d1339af826a3"/>
 				<textField evaluationTime="Report">
-					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343"/>
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="8f526bdd-00cf-4a61-b46c-69ae86f30746"/>
 					<textElement verticalAlignment="Middle">
 						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343"/>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="97d180d6-8f9a-423f-b61b-9107f7c37774"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
 				</textField>
 				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343"/>
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="770001b9-4a7e-4d48-8472-223ec80a4a92"/>
 					<textElement verticalAlignment="Middle">
 						<font size="10" isBold="false"/>
 					</textElement>

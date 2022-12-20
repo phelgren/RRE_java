@@ -49,7 +49,7 @@ public class Test6{
     	boolean success = true;
     	
     	String reportName = "/reports/report_templates/Employee_Listing.jrxml";
-    	String reportOutput = "/reports/report_output/Employee_List";
+    	String reportOutput = "/reports/report_output/Employee_List_test6";
     	String sender = "pete@valadd.com";
     	String recipient = "pete@opensource4i.com";
     	HashMap reportParameters = null;

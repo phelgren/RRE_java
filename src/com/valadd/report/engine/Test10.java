@@ -49,7 +49,7 @@ public class Test10{
     	boolean success = true;
     	
     	String reportName = "/reports/report_templates/Employee_Listing_with_Parms.jasper";
-    	String reportOutput = "/reports/report_output/Employee_List";
+    	String reportOutput = "/reports/report_output/Employee_List_test10";
     	String subject = "Your report '$reportOutput.$outputFormat' is ready";
     	String text = "You will will find your report '$reportOutput.$outputFormat' attached.";
     	String sender = "pete@valadd.com";

@@ -49,7 +49,7 @@ public class Test11{
     	boolean success = true;
     	
     	String reportName = "/reports/report_templates/Employee_Gender_Chart.jrxml";
-    	String reportOutput = "/reports/report_output/Employee_Gender_Chart";
+    	String reportOutput = "/reports/report_output/Employee_Gender_Chart_test11";
     	String sender = "pete@valadd.com";
     	String recipient = "pete@opensource4i.com";
     	HashMap reportParameters = new HashMap();

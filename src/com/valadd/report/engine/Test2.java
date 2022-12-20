@@ -46,7 +46,7 @@ public class Test2{
     	boolean success = true;
     	
     	String reportName = "/reports/report_templates/Employee_Listing_new.jasper";
-    	String reportOutput = "/reports/report_output/Employee_List";
+    	String reportOutput = "/reports/report_output/Employee_List_test2";
  
     	HashMap reportParameters = null;
     	String outputFormat = "PDF";

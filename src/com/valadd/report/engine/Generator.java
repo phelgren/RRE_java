@@ -375,18 +375,16 @@ public class Generator {
 
 	    boolean success = true;
 	    
-	    System.out.println("Ignoring Font errors");
-	    
 	    JasperReportsContext jasperReportsContext = DefaultJasperReportsContext.getInstance();
 	    
-	    jasperReportsContext.setProperty("net.sf.jasperreports.awt.ignore.missing.font", "true");
+	    //System.out.println("Ignoring Font errors");
+	    
+	    jasperReportsContext.setProperty("net.sf.jasperreports.awt.ignore.missing.font", "false");
 		    		
 		JasperPrint jasperPrint = returnReportPrint(pConnection, reportName,reportParams ,compileFirst);
+ 
+		File out = null;
 
-		    
-			File out = null;
-			
-				
 		    //ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
 		    if(outputFormat.equals("PDF")){
@@ -558,26 +556,37 @@ public class Generator {
             	// will have a jrxml extension.  So, check to see if there is a .jasper file and, if not, TRY
             	// to compile a file substituting jrxml as the extension
             	
-            	File f = new File(fileName);
+            	// We'll need to check extensions
+            	// Get the file name without the extension
             	
-            	if(!compile && !f.exists())
-            	{
-        			String newFilename = fileName.substring(0, fileName.length() - 6) + "jrxml";
-                    JasperCompileManager.compileReportToFile(newFilename,fileName);
-            	}
+            	String basefilename = fileName.substring(0,fileName.lastIndexOf("."));
+            	String jrxmlfile = basefilename + ".jrxml";
+            	String jasperfile = basefilename + ".jasper";
             	
-            	// In any case that file should be there
-            	InputStream inputStream = JRLoader.getFileInputStream(fileName);
+            	File jrxml = new File(jrxmlfile);
+            	File jasper = new File(jasperfile);
+            	
+            	// The compile switch tells us what kind of file reference was passed
+            			// compile == false - .jasper file extension
+            			// compile == true - .jrxml file extension
+            	
+            	if(!compile && !jasper.exists())
+            		// Gonna create the jasper file so it can run
+            		compile = true; // force the compile
             	
             		if(compile) {
             				// So, build the jasper file on a compile JUST in case its to be used later
-                        JasperReport jasperReport = JasperCompileManager.compileReport(fileName);
+                        JasperReport jasperReport = JasperCompileManager.compileReport(jrxmlfile);
                         jasperPrint = JasperFillManager.fillReport(jasperReport, reportParams, pConnection);
             		}
             		else {// already compiled
+                    	
+                    	// In any case that jasper file should be there
+                    	InputStream inputStream = JRLoader.getFileInputStream(jasperfile);
             			jasperPrint = JasperFillManager.fillReport(inputStream, reportParams, pConnection);
             			//jasperPrint = (JasperPrint)JRLoader.loadObject(sourceFile);
             		}
+            		
             }catch(JRException ex) {
                 String connectMsg = "Could not create the report stream " + ex.getMessage() + " " + ex.getLocalizedMessage();
                 System.out.println(connectMsg);
